@@ -47,10 +47,10 @@ def display_feedback(guess, feedback):
 
 # Main game function
 def play_game(secret_word):
-    attempts = 7  # Thala for a reason
+    attempts = 6
 
     print("Welcome to Wordle!")
-    print("Guess the 5-letter word. You have 7 attempts. Good luck!🍀")
+    print("Guess the 5-letter word. You have 6 attempts. Good luck!🍀")
     print()
 
     # Loop for attempts
@@ -68,7 +68,7 @@ def play_game(secret_word):
         fb = check_guess(secret_word, g)
         display_feedback(g, fb)
         if g == secret_word:
-            print("🎉 Congratulations! You've guessed the word correctly!")
+            print(f"🎉 Congratulations! You've guessed the word correctly in {attempt} attempts.")
             return
     print(f"❌ Out of attempts! The secret word was: {secret_word.upper()}")
 
